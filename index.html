@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alcova Lounge Bar - Sapori della Puglia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo"><img src="images/logo.png" alt="Alcova Logo"></a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="#chi-siamo">Chi Siamo</a>
+                <a href="menu.html">Menu</a>
+                <a href="#galleria">Galleria</a>
+                <a href="#prenotazioni">Prenotazioni</a>
+                <a href="#contatti">Contatti</a>
+            </div>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Alcova Lounge Bar</h1>
+            <p>More than a brunch, it's a bite of Apulia</p>
+            <a href="#prenotazioni" class="cta-button">Prenota ora</a>
+        </div>
+    </header>
+
+    <section id="chi-siamo" class="section">
+        <div class="container">
+            <h2>Chi Siamo</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Nel cuore della città, Alcova Lounge Bar è un'oasi di gusto e raffinatezza dove la tradizione pugliese incontra l'innovazione culinaria.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/team.jpg" alt="Il team di Alcova Lounge Bar">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="section">
+        <div class="container">
+            <h2>Il Nostro Menu</h2>
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <h3>Brunch</h3>
+                    <p>Una selezione di specialità pugliesi rivisitate in chiave moderna</p>
+                    <span class="price">da €15</span>
+                </div>
+                <div class="menu-card">
+                    <h3>Drinks</h3>
+                    <p>Cocktail signature e classici con un tocco mediterraneo</p>
+                    <span class="price">da €10</span>
+                </div>
+                <div class="menu-card">
+                    <h3>Specialità Pugliesi</h3>
+                    <p>Il meglio della tradizione locale in chiave gourmet</p>
+                    <span class="price">da €12</span>
+                </div>
+            </div>
+            <a href="menu.html" class="cta-button secondary">Scopri il menu completo</a>
+        </div>
+    </section>
+
+    <section id="galleria" class="section">
+        <div class="container">
+            <h2>Galleria</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="images/caption.jpg" alt="Interni Alcova"></div>
+                <div class="gallery-item"><img src="images/drink.jpg" alt="Signature Cocktail"></div>
+                <div class="gallery-item"><img src="images/food1.jpg" alt="Piatto Speciale"></div>
+                <div class="gallery-item"><img src="images/lounge.jpg" alt="Lounge Area"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="prenotazioni" class="section">
+        <div class="container">
+            <h2>Prenotazioni</h2>
+            <form class="booking-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Nome" required>
+                </div>
+                <div class="form-group">
+                    <input type="date" name="date" required>
+                    <input type="time" name="time" required>
+                    <select name="people" required>
+                        <option value="" disabled selected>Numero di persone</option>
+                        <option value="1">1 persona</option>
+                        <option value="2">2 persone</option>
+                        <option value="3">3 persone</option>
+                        <option value="4">4 persone</option>
+                        <option value="5+">5+ persone</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea name="notes" placeholder="Note aggiuntive (opzionale)" rows="3"></textarea>
+                </div>
+                <button type="submit" class="cta-button">Prenota su WhatsApp</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contatti" class="section">
+        <div class="container">
+            <h2>Contatti & Social</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Dove Siamo</h3>
+                    <p>Via Martiri di Dogali, 23<br>70044 Polignano a Mare (BA)</p>
+                    <h3>Orari</h3>
+                    <p>
+                        Lunedì: Chiuso<br>
+                        Martedì-Venerdì: 09:30-15:00, 17:00-01:00<br>
+                        Sabato: 09:30-15:00, 18:00-02:00<br>
+                        Domenica: 09:30-15:00, 17:00-01:00<br>
+                        <small><em>Nota: Gli orari possono variare durante i giorni festivi</em></small>
+                    </p>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="map">
+                    <iframe
+                      src="https://maps.google.com/maps?q=Via%20Martiri%20di%20Dogali%2023%2C%2070044%20Polignano%20a%20Mare%20BA&output=embed"
+                      style="border:0;"
+                      allowfullscreen=""
+                      loading="lazy">
+                    </iframe>
+                  </div>                  
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="logo" src="images/logo.png"></div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#contatti">Contatti</a>
+            </div>
+            <p class="copyright">&copy; 2025 Alcova Lounge Bar. Tutti i diritti riservati.<br>
+            <span class="credits">Realizzato con <span class="heart">🩷</span> da M.P.</span></p>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
