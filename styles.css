@@ -1037,6 +1037,10 @@ textarea {
         font-size: 2.2rem;
     }
     
+    .hero-content h1 {
+        color: #E8C8B0; /* Colore cotto chiaro */
+    }
+    
     .hero-content p {
         font-size: 1.2rem;
     }

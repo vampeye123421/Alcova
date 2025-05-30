@@ -260,44 +260,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add animation check on resize
     window.addEventListener('resize', animateOnScroll);
     
-    // Modal functionality for brunch menu
+    // Brunch card functionality
     const brunchCard = document.getElementById('brunch-card');
-    const menuModal = document.getElementById('menu-modal');
-    const closeModal = document.querySelector('.close-modal');
-    const menuImage = document.getElementById('menu-image');
     
-    if (brunchCard && menuModal) {
-        // Open modal when brunch card is clicked
-        brunchCard.addEventListener('click', () => {
-            menuModal.classList.add('show');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
-        });
-        
-        // Close modal when X is clicked
-        closeModal.addEventListener('click', () => {
-            menuModal.classList.remove('show');
-            document.body.style.overflow = ''; // Re-enable scrolling
-        });
-        
-        // Close modal when clicking outside the modal content
-        menuModal.addEventListener('click', (e) => {
-            if (e.target === menuModal) {
-                menuModal.classList.remove('show');
-                document.body.style.overflow = '';
-            }
-        });
-        
-        // Open menu link when image is clicked
-        menuImage.addEventListener('click', () => {
-            window.open('https://qrco.de/beonPd', '_blank');
-        });
-        
-        // Close modal with Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && menuModal.classList.contains('show')) {
-                menuModal.classList.remove('show');
-                document.body.style.overflow = '';
-            }
-        });
-    }
+    // No modal needed as the link is now directly in the card
+
 });
