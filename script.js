@@ -1,4 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Aggiungi animazioni al caricamento della pagina
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            easing: 'ease',
+            once: true
+        });
+        
+        // Gestione del banner dei cookie
+        const cookieBanner = document.getElementById('cookie-banner');
+        const acceptCookiesBtn = document.getElementById('accept-cookies');
+        
+        // Controlla se l'utente ha già accettato i cookie
+        if (!localStorage.getItem('cookiesAccepted')) {
+            // Mostra il banner dopo 1 secondo
+            setTimeout(() => {
+                cookieBanner.classList.add('show');
+            }, 1000);
+        }
+        
+        // Gestione del click sul pulsante di accettazione
+        if (acceptCookiesBtn) {
+            acceptCookiesBtn.addEventListener('click', () => {
+                localStorage.setItem('cookiesAccepted', 'true');
+                cookieBanner.classList.remove('show');
+            });
+        }
+        
+        // La gestione della traduzione è ora affidata a Google Translate
+    }
+    
     // Mobile menu toggle
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
@@ -14,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 top: 70px;
                 left: 0;
                 right: 0;
-                background: white;
+                background: rgba(255, 255, 255, 0.98);
                 display: none;
                 flex-direction: column;
                 align-items: center;
@@ -24,11 +55,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 transition: opacity 0.3s ease, transform 0.3s ease;
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                 z-index: 999;
+                border-radius: 0 0 var(--border-radius) var(--border-radius);
             }
 
             .nav-links a {
                 margin: 1rem 0;
                 font-size: 1.2rem;
+                width: 100%;
+                text-align: center;
+                padding: 0.5rem 0;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            }
+
+            .nav-links a:last-child {
+                border-bottom: none;
             }
 
             .hamburger.active span:nth-child(1) {
@@ -71,12 +111,33 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 300);
         }
     });
+    
+    // Close mobile menu when clicking on navigation links
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (isMenuOpen) {
+                hamburger.click();
+            }
+        });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (isMenuOpen && !navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+            hamburger.click();
+        }
+    });
 
     // Smooth scroll for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const href = this.getAttribute('href');
+            
+            // Verifica che l'href non sia solo '#'
+            if (href === '#') return;
+            
+            const target = document.querySelector(href);
             
             if (target) {
                 // Close mobile menu if open
@@ -93,30 +154,40 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Navbar background change on scroll
+    // Navbar background change on scroll - ottimizzato per panning asincrono
     const navbar = document.querySelector('.navbar');
     let lastScroll = 0;
+    let scrollTimeout;
 
-    window.addEventListener('scroll', () => {
+    // Utilizziamo requestAnimationFrame per ottimizzare le prestazioni
+    function updateNavbar() {
         const currentScroll = window.pageYOffset;
 
         // Add/remove background color based on scroll position
         if (currentScroll > 50) {
-            navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            navbar.classList.add('scrolled');
         } else {
-            navbar.style.backgroundColor = 'transparent';
-            navbar.style.boxShadow = 'none';
+            navbar.classList.remove('scrolled');
         }
 
         // Hide/show navbar based on scroll direction
         if (currentScroll > lastScroll && currentScroll > 500) {
-            navbar.style.transform = 'translateY(-100%)';
+            navbar.classList.add('nav-hidden');
         } else {
-            navbar.style.transform = 'translateY(0)';
+            navbar.classList.remove('nav-hidden');
         }
 
         lastScroll = currentScroll;
+    }
+
+    window.addEventListener('scroll', () => {
+        // Utilizziamo requestAnimationFrame per sincronizzare con il refresh del browser
+        if (!scrollTimeout) {
+            scrollTimeout = requestAnimationFrame(() => {
+                updateNavbar();
+                scrollTimeout = null;
+            });
+        }
     });
 
     // Form submission handling - WhatsApp integration
@@ -176,11 +247,11 @@ document.addEventListener('DOMContentLoaded', () => {
     animateOnScroll();
 
     // Add animation check on scroll with throttling
-    let scrollTimeout;
+    let animationScrollTimeout;
     window.addEventListener('scroll', () => {
-        if (!scrollTimeout) {
-            scrollTimeout = setTimeout(() => {
-                scrollTimeout = null;
+        if (!animationScrollTimeout) {
+            animationScrollTimeout = setTimeout(() => {
+                animationScrollTimeout = null;
                 animateOnScroll();
             }, 50);
         }
@@ -188,4 +259,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add animation check on resize
     window.addEventListener('resize', animateOnScroll);
+    
+    // Modal functionality for brunch menu
+    const brunchCard = document.getElementById('brunch-card');
+    const menuModal = document.getElementById('menu-modal');
+    const closeModal = document.querySelector('.close-modal');
+    const menuImage = document.getElementById('menu-image');
+    
+    if (brunchCard && menuModal) {
+        // Open modal when brunch card is clicked
+        brunchCard.addEventListener('click', () => {
+            menuModal.classList.add('show');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        });
+        
+        // Close modal when X is clicked
+        closeModal.addEventListener('click', () => {
+            menuModal.classList.remove('show');
+            document.body.style.overflow = ''; // Re-enable scrolling
+        });
+        
+        // Close modal when clicking outside the modal content
+        menuModal.addEventListener('click', (e) => {
+            if (e.target === menuModal) {
+                menuModal.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Open menu link when image is clicked
+        menuImage.addEventListener('click', () => {
+            window.open('https://qrco.de/beonPd', '_blank');
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && menuModal.classList.contains('show')) {
+                menuModal.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        });
+    }
 });

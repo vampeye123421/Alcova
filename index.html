@@ -2,8 +2,10 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://maps.google.com https://translate.google.com https://translate.googleapis.com https://translate-pa.googleapis.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://translate.googleapis.com https://www.gstatic.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https://translate.googleapis.com https://www.google.com https://fonts.gstatic.com https://www.gstatic.com; frame-src https://maps.google.com https://www.google.com; connect-src 'self' https://translate.googleapis.com https://translate-pa.googleapis.com;">
     <title>Alcova Lounge Bar - Sapori della Puglia</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -16,7 +18,7 @@
             <div class="nav-links">
                 <a href="index.html" class="active">Home</a>
                 <a href="#chi-siamo">Chi Siamo</a>
-                <a href="menu.html">Menu</a>
+                <a href="#menu">Menu</a>
                 <a href="#galleria">Galleria</a>
                 <a href="#prenotazioni">Prenotazioni</a>
                 <a href="#contatti">Contatti</a>
@@ -54,9 +56,9 @@
 
     <section id="menu" class="section">
         <div class="container">
-            <h2>Il Nostro Menu</h2>
+            <h2>Il Brunch</h2>
             <div class="menu-grid">
-                <div class="menu-card">
+                <div class="menu-card" id="brunch-card">
                     <h3>Brunch</h3>
                     <p>Una selezione di specialità pugliesi rivisitate in chiave moderna</p>
                     <span class="price">da €15</span>
@@ -67,12 +69,11 @@
                     <span class="price">da €10</span>
                 </div>
                 <div class="menu-card">
-                    <h3>Specialità Pugliesi</h3>
-                    <p>Il meglio della tradizione locale in chiave gourmet</p>
-                    <span class="price">da €12</span>
+                    <h3>Menu Completo</h3>
+                    <p>Scopri tutte le nostre specialità e bevande</p>
+                    <a href="https://qrco.de/beonPd" target="_blank" class="cta-button secondary">Vedi Menu</a>
                 </div>
             </div>
-            <a href="menu.html" class="cta-button secondary">Scopri il menu completo</a>
         </div>
     </section>
 
@@ -81,9 +82,13 @@
             <h2>Galleria</h2>
             <div class="gallery-grid">
                 <div class="gallery-item"><img src="images/caption.jpg" alt="Interni Alcova"></div>
-                <div class="gallery-item"><img src="images/drink.jpg" alt="Signature Cocktail"></div>
+                <div class="gallery-item"><img src="images/tania.jpg" alt="Tania e Francesco"></div>
                 <div class="gallery-item"><img src="images/food1.jpg" alt="Piatto Speciale"></div>
                 <div class="gallery-item"><img src="images/lounge.jpg" alt="Lounge Area"></div>
+                <div class="gallery-item"><img src="images/buono.jpeg" alt="Cocktail Buono"></div>
+                <div class="gallery-item"><img src="images/donuts.jpeg" alt="Donuts"></div>
+                <div class="gallery-item"><img src="images/insalata.jpeg" alt="Insalata Fresca"></div>
+                <div class="gallery-item"><img src="images/tania_cornetto.jpeg" alt="Tania con Cornetto"></div>
             </div>
         </div>
     </section>
@@ -131,7 +136,7 @@
                         <small><em>Nota: Gli orari possono variare durante i giorni festivi</em></small>
                     </p>
                     <div class="social-links">
-                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/alcovaloungebar/" target="_blank"><i class="fab fa-instagram"></i></a>
                         <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
@@ -140,7 +145,8 @@
                       src="https://maps.google.com/maps?q=Via%20Martiri%20di%20Dogali%2023%2C%2070044%20Polignano%20a%20Mare%20BA&output=embed"
                       style="border:0;"
                       allowfullscreen=""
-                      loading="lazy">
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                   </div>                  
             </div>
@@ -151,16 +157,58 @@
         <div class="container">
             <div class="logo" src="images/logo.png"></div>
             <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Cookie Policy</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="cookie-policy.html">Cookie Policy</a>
+                <a href="termini-condizioni.html">Termini e Condizioni</a>
                 <a href="#contatti">Contatti</a>
+            </div>
+            <div class="language-selector">
+                <label>Lingua:</label>
+                <div id="google_translate_element"></div>
             </div>
             <p class="copyright">&copy; 2025 Alcova Lounge Bar. Tutti i diritti riservati.<br>
             <span class="credits">Realizzato con <span class="heart">🩷</span> da M.P.</span></p>
         </div>
     </footer>
 
-    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Modal per visualizzare il menu -->
+    <div id="menu-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Il Brunch</h2>
+            <div class="modal-image-container">
+                <img src="images/menu.jpg" alt="Menu Completo" id="menu-image">
+                <p>Clicca sull'immagine per vedere il menu online</p>
+            </div>
+            <a href="https://qrco.de/beonPd" target="_blank" class="cta-button secondary">Vedi Menu Online</a>
+        </div>
+    </div>
+    
     <script src="script.js"></script>
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'it',
+            includedLanguages: 'en,fr,de,es',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+        }, 'google_translate_element');
+    }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <p>Questo sito utilizza cookie tecnici necessari al funzionamento del sito. Continuando a navigare, accetti l'utilizzo dei cookie.</p>
+            <div class="cookie-buttons">
+                <a href="cookie-policy.html" class="cookie-more">Maggiori informazioni</a>
+                <button id="accept-cookies" class="cookie-accept">Accetta</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
