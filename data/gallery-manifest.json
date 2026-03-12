@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "generatedAt": "2026-03-12T17:01:23.652Z",
+  "total": 13,
+  "images": [
+    {
+      "src": "images/2024-09-11.jpg",
+      "filename": "2024-09-11.jpg",
+      "caption": "Atmosfera serale",
+      "alt": "Atmosfera serale"
+    },
+    {
+      "src": "images/buono.jpeg",
+      "filename": "buono.jpeg",
+      "caption": "Sapori mediterranei",
+      "alt": "Sapori mediterranei"
+    },
+    {
+      "src": "images/caption.jpg",
+      "filename": "caption.jpg",
+      "caption": "Bancone Alcova",
+      "alt": "Bancone Alcova"
+    },
+    {
+      "src": "images/donuts.jpeg",
+      "filename": "donuts.jpeg",
+      "caption": "Angolo dolce",
+      "alt": "Angolo dolce"
+    },
+    {
+      "src": "images/drink.jpg",
+      "filename": "drink.jpg",
+      "caption": "Cocktail signature",
+      "alt": "Cocktail signature"
+    },
+    {
+      "src": "images/food1.jpg",
+      "filename": "food1.jpg",
+      "caption": "Colazione salata",
+      "alt": "Colazione salata"
+    },
+    {
+      "src": "images/IMG-20250530-WA0014.jpg",
+      "filename": "IMG-20250530-WA0014.jpg",
+      "caption": "Team Alcova",
+      "alt": "Team Alcova"
+    },
+    {
+      "src": "images/insalata.jpeg",
+      "filename": "insalata.jpeg",
+      "caption": "Piatti freschi",
+      "alt": "Piatti freschi"
+    },
+    {
+      "src": "images/lounge.jpg",
+      "filename": "lounge.jpg",
+      "caption": "Sala interna",
+      "alt": "Sala interna"
+    },
+    {
+      "src": "images/menu.jpg",
+      "filename": "menu.jpg",
+      "caption": "Piatti della casa",
+      "alt": "Piatti della casa"
+    },
+    {
+      "src": "images/tania_cornetto.jpeg",
+      "filename": "tania_cornetto.jpeg",
+      "caption": "Colazione con stile",
+      "alt": "Colazione con stile"
+    },
+    {
+      "src": "images/tania.jpg",
+      "filename": "tania.jpg",
+      "caption": "Accoglienza",
+      "alt": "Accoglienza"
+    },
+    {
+      "src": "images/team.jpg",
+      "filename": "team.jpg",
+      "caption": "Tania e Francesco",
+      "alt": "Tania e Francesco"
+    }
+  ]
+}

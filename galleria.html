@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galleria Alcova Lounge Bar: foto del locale, dei piatti e dell'atmosfera.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; script-src 'self' 'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE=' 'sha256-ieoeWczDHkReVBsRBqaal5AFMlBtNjMzgwKvLqi/tSU='; script-src-elem 'self' 'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE=' 'sha256-ieoeWczDHkReVBsRBqaal5AFMlBtNjMzgwKvLqi/tSU='; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; upgrade-insecure-requests;">
+    <title>Galleria - Alcova Lounge Bar</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="legal-page">
+    <a class="skip-link" href="#main-content">Salta al contenuto principale</a>
+
+    <nav class="navbar" aria-label="Navigazione principale">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="Alcova Lounge Bar, torna alla home">
+                <img src="images/logo.png" alt="Alcova Lounge Bar" width="750" height="333" decoding="async">
+            </a>
+            <div class="nav-links" id="primary-navigation">
+                <a href="index.html">Home</a>
+                <a href="consigli-utili.html">Consigli utili</a>
+                <a href="chi-siamo.html">Chi Siamo</a>
+                <a href="galleria.html" class="active">Galleria</a>
+                <a href="prenotazioni.html">Prenotazioni</a>
+                <a href="contatti.html">Contatti</a>
+            </div>
+            <button class="hamburger" type="button" aria-label="Apri menu" aria-controls="primary-navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main-content" class="site-main">
+        <section id="galleria" class="section section-gallery">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Galleria</span>
+                    <h2 class="single-line-title">Foto del lounge bar.</h2>
+                    <p>Qui vedi gli spazi, la cucina e l'atmosfera di Alcova.</p>
+                </div>
+
+                <div class="gallery-grid gallery-grid--editorial" data-gallery-grid></div>
+                <p class="gallery-empty is-hidden" data-gallery-empty>Nessuna immagine disponibile in galleria.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <a href="index.html" class="logo" aria-label="Torna alla home">
+                <img src="images/logo.png" alt="Alcova Lounge Bar" width="750" height="333" decoding="async">
+            </a>
+            <div class="footer-links">
+                <a href="consigli-utili.html">Consigli utili</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="cookie-policy.html">Cookie Policy</a>
+                <a href="termini-condizioni.html">Termini e Condizioni</a>
+                <a href="contatti.html">Contatti</a>
+            </div>
+            <p class="copyright">&copy; 2026 Alcova Lounge Bar. Tutti i diritti riservati.<br>
+            <span class="credits">Realizzato con <span class="heart">&#10084;</span> da M.P.</span></p>
+        </div>
+    </footer>
+
+    <div class="lightbox" data-lightbox hidden>
+        <div class="lightbox-backdrop" data-lightbox-close></div>
+        <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Anteprima immagine">
+            <button class="lightbox-close" type="button" data-lightbox-close aria-label="Chiudi anteprima">Chiudi</button>
+            <figure class="lightbox-figure">
+                <img data-lightbox-image src="" alt="">
+                <figcaption data-lightbox-caption></figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <script src="config.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>

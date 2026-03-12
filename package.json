@@ -1,0 +1,17 @@
+{
+  "name": "alcova",
+  "version": "1.0.0",
+  "description": "Static website for Alcova Lounge Bar.",
+  "private": true,
+  "scripts": {
+    "start": "serve -l 8080 .",
+    "start:open": "serve -l 8080 . --single",
+    "gallery:manifest": "node scripts/generate-gallery-manifest.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "devDependencies": {
+    "serve": "^14.2.6"
+  }
+}

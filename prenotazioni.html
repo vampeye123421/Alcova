@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prenotazioni Alcova Lounge Bar: prenota velocemente su WhatsApp.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; script-src 'self' 'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE=' 'sha256-ieoeWczDHkReVBsRBqaal5AFMlBtNjMzgwKvLqi/tSU='; script-src-elem 'self' 'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE=' 'sha256-ieoeWczDHkReVBsRBqaal5AFMlBtNjMzgwKvLqi/tSU='; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; upgrade-insecure-requests;">
+    <title>Prenotazioni - Alcova Lounge Bar</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="legal-page">
+    <a class="skip-link" href="#main-content">Salta al contenuto principale</a>
+
+    <nav class="navbar" aria-label="Navigazione principale">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="Alcova Lounge Bar, torna alla home">
+                <img src="images/logo.png" alt="Alcova Lounge Bar" width="750" height="333" decoding="async">
+            </a>
+            <div class="nav-links" id="primary-navigation">
+                <a href="index.html">Home</a>
+                <a href="consigli-utili.html">Consigli utili</a>
+                <a href="chi-siamo.html">Chi Siamo</a>
+                <a href="galleria.html">Galleria</a>
+                <a href="prenotazioni.html" class="active">Prenotazioni</a>
+                <a href="contatti.html">Contatti</a>
+            </div>
+            <button class="hamburger" type="button" aria-label="Apri menu" aria-controls="primary-navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main-content" class="site-main">
+        <section id="prenotazioni" class="section section-booking">
+            <div class="container">
+                <div class="booking-shell reveal">
+                    <div class="booking-copy">
+                        <span class="eyebrow">Prenotazioni</span>
+                        <h2 class="single-line-title">Prenota in modo semplice.</h2>
+                        <p>Inserisci i dati principali e apri subito WhatsApp con il messaggio pronto.</p>
+                        <div class="booking-points">
+                            <div class="booking-point">
+                                <strong>Rapido</strong>
+                                <span>Il messaggio &egrave; gi&agrave; pronto con data, ora e numero di persone.</span>
+                            </div>
+                            <div class="booking-point">
+                                <strong>Chiaro</strong>
+                                <span>Puoi aggiungere note se hai richieste particolari.</span>
+                            </div>
+                            <div class="booking-point">
+                                <strong>Diretto</strong>
+                                <span>Parli direttamente con noi, senza passaggi inutili.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="booking-form" novalidate>
+                        <div class="form-group form-group--triple">
+                            <label class="sr-only" for="booking-name">Nome</label>
+                            <input id="booking-name" type="text" name="name" placeholder="Nome" autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="booking-date">Data</label>
+                            <input id="booking-date" type="date" name="date" required>
+                            <label class="sr-only" for="booking-time">Ora</label>
+                            <input id="booking-time" type="time" name="time" required>
+                            <label class="sr-only" for="booking-people">Numero di persone</label>
+                            <select id="booking-people" name="people" required>
+                                <option value="" disabled selected>Numero di persone</option>
+                                <option value="1">1 persona</option>
+                                <option value="2">2 persone</option>
+                                <option value="3">3 persone</option>
+                                <option value="4">4 persone</option>
+                                <option value="5+">5+ persone</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="booking-notes">Note aggiuntive</label>
+                            <textarea id="booking-notes" name="notes" placeholder="Note aggiuntive (opzionale)" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">Prenota su WhatsApp</button>
+                        <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <a href="index.html" class="logo" aria-label="Torna alla home">
+                <img src="images/logo.png" alt="Alcova Lounge Bar" width="750" height="333" decoding="async">
+            </a>
+            <div class="footer-links">
+                <a href="consigli-utili.html">Consigli utili</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="cookie-policy.html">Cookie Policy</a>
+                <a href="termini-condizioni.html">Termini e Condizioni</a>
+                <a href="contatti.html">Contatti</a>
+            </div>
+            <p class="copyright">&copy; 2026 Alcova Lounge Bar. Tutti i diritti riservati.<br>
+            <span class="credits">Realizzato con <span class="heart">&#10084;</span> da M.P.</span></p>
+        </div>
+    </footer>
+
+    <script src="config.js" defer></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
