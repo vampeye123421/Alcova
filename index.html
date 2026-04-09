@@ -1,0 +1,185 @@
+﻿<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alcova Lounge Bar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400;1,800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <noscript><style>.page-loader{display:none!important;}</style></noscript>
+  </head>
+  <body class="is-loading">
+    <div class="page-loader" id="pageLoader" aria-hidden="false">
+      <div class="page-loader__content" role="status" aria-live="polite" aria-label="Caricamento">
+        <p class="page-loader__word" aria-label="ALCOVA">
+          <span>A</span><span>L</span><span>C</span><span>O</span><span>V</span><span>A</span>
+        </p>
+        <p class="page-loader__sub">LOUNGE BAR</p>
+      </div>
+    </div>
+
+    <button class="hamburger" id="hamburgerButton" type="button" aria-label="Apri menu" aria-controls="siteMenu" aria-expanded="false">
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+    </button>
+
+    <nav class="site-menu" id="siteMenu" aria-hidden="true">
+      <ul class="site-menu__list">
+        <li><a class="site-menu__link" href="#home">Home</a></li>
+        <li><a class="site-menu__link" href="#modes">Aperitivo</a></li>
+        <li><a class="site-menu__link" href="#cucina">Cucina</a></li>
+        <li><a class="site-menu__link" href="#specialita">Specialita</a></li>
+        <li><a class="site-menu__link" href="#giornata">Colazione-Cena</a></li>
+        <li><a class="site-menu__link" href="#partita">Partita</a></li>
+        <li><a class="site-menu__link" href="#chi-siamo">Chi siamo</a></li>
+        <li><a class="site-menu__link" href="alloggiare.html">Alloggiare</a></li>
+      </ul>
+    </nav>
+    <div class="site-menu__backdrop" id="menuBackdrop"></div>
+
+    <main>
+      <section class="hero" id="home" aria-label="Alcova Lounge Bar">
+        <img src="assets/logo.png" alt="Logo Alcova" class="brand-logo" onerror="this.onerror=null;this.src='assets/logo-main.svg';" />
+        <div class="hero__inner">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              Vivi l'esperienza
+              <br />
+              di un <em>aperitivo</em>, diverso.
+            </h1>
+            <p class="hero__subtitle">Nel cuore di Polignano a Mare.</p>
+          </div>
+
+          <button class="cta" id="bookButton" data-booking-url="https://wa.me/393891248906?text=Ciao%2C%20vorrei%20prenotare%20un%20tavolo.">
+            PRENOTA ORA
+          </button>
+        </div>
+      </section>
+
+      <section class="modes" id="modes" aria-label="Tre modi di vivere il tuo aperitivo">
+        <div class="modes__container">
+          <h2 class="modes__title"><em>Tre</em> modi di vivere il tuo aperitivo</h2>
+
+          <div class="modes__grid">
+            <article class="mode-card">
+              <img src="assets/beer.jpg" alt="Birra spillata alla spina" class="mode-card__image" />
+              <h3 class="mode-card__title">Birre</h3>
+              <p class="mode-card__text">Birre fresche e di qualit&agrave;, alla spina o in lattina.</p>
+            </article>
+
+            <article class="mode-card">
+              <img src="assets/cocktail.jpg" alt="Cocktail arancione servito in calice" class="mode-card__image" />
+              <h3 class="mode-card__title">Cocktail</h3>
+              <p class="mode-card__text">Un assaggio di cocktail moderni, old school e molto altro ancora!</p>
+            </article>
+
+            <article class="mode-card">
+              <img src="assets/wine.jpg" alt="Bottiglia di vino" class="mode-card__image" />
+              <h3 class="mode-card__title">Vini</h3>
+              <p class="mode-card__text mode-card__text--italic">
+                Selezione di vini scelti con cura: bianchi freschi, rossi strutturati e bollicine perfette per accompagnare la tua serata.
+              </p>
+            </article>
+          </div>
+
+          <button class="menu-cta" id="menuButton" data-menu-url="https://menu.menumal.com/alcovaloungebar?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGn6Tr_XYhdPbmne3l499JPnN_efFZHWXebryuGwQqIlwgclFWsGPEgds0-0eI_aem_WcuPPE_kfWn0ZxEpxWoIiQ">
+            MEN&Ugrave;
+          </button>
+        </div>
+      </section>
+
+      <section class="cuisine" id="cucina" aria-label="Una cucina tutta da scoprire">
+        <div class="cuisine__inner">
+          <h2 class="cuisine__title">
+            Una cucina tutta da <em>scoprire.</em>
+          </h2>
+        </div>
+      </section>
+
+      <section class="specialties" id="specialita" aria-label="Antipasti, piadine e focacce">
+        <article class="specialties__row specialties__row--antipasti">
+          <div class="specialties__text">
+            <h3 class="specialties__title">ANTIPASTI</h3>
+            <p class="specialties__subtitle">RIVISITATI</p>
+          </div>
+        </article>
+
+        <article class="specialties__row specialties__row--piadine">
+          <div class="specialties__text">
+            <h3 class="specialties__title">PIADINE</h3>
+            <p class="specialties__subtitle">FATTE IN CASA</p>
+          </div>
+        </article>
+
+        <article class="specialties__row specialties__row--focacce">
+          <div class="specialties__text">
+            <h3 class="specialties__title">FOCACCE</h3>
+            <p class="specialties__subtitle">BIANCHE RIPIENE</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="daypart" id="giornata" aria-label="Dalla colazione alla cena">
+        <div class="daypart__inner">
+          <h2 class="daypart__title">
+            DALLA
+            <br />
+            COLAZIONE
+            <br />
+            ALLA
+            <br />
+            CENA
+          </h2>
+
+          <p class="daypart__text">
+            Un <em>ambiente accogliente</em> dove poter iniziare la giornata con una colazione salata, fermarsi per pranzo, rilassarsi all'aperitivo o concludere con una cena di gusto.
+          </p>
+        </div>
+      </section>
+
+      <section class="games" id="partita" aria-label="Inganna l'attesa con una partita">
+        <div class="games__inner">
+          <h2 class="games__title">Inganna l'attesa con una partita</h2>
+        </div>
+      </section>
+
+      <section class="about" id="chi-siamo" aria-label="Chi siamo">
+        <div class="about__inner">
+          <figure class="about__photo-wrap">
+            <img src="assets/about-us.jpg" alt="Foto in bianco e nero di Francesco e Tania" class="about__photo" />
+          </figure>
+
+          <div class="about__content">
+            <h2 class="about__title">Chi siamo</h2>
+
+            <p class="about__text">
+              Francesco e Tania hanno sempre sognato un posto che fosse pi&ugrave; di un semplice bar:
+              <br />
+              uno spazio dove le persone potessero ritrovarsi, rilassarsi e vivere momenti speciali.
+            </p>
+
+            <p class="about__text">
+              Da questa idea &egrave; nato Alcova,
+              <br />
+              un lounge bar pensato per chi ama buona musica, cocktail curati e piatti gustosi.
+              <br />
+              Ogni giorno mettiamo passione in quello che facciamo, cercando di offrire ai nostri clienti non solo un drink, ma un'esperienza da ricordare.
+            </p>
+
+            <p class="about__text">
+              Alcova &egrave; la nostra casa...
+              <br />
+              e siamo felici di condividerla con voi.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

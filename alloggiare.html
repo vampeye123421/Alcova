@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alloggiare | Alcova Lounge Bar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400;1,800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <noscript><style>.page-loader{display:none!important;}</style></noscript>
+  </head>
+  <body class="is-loading page-alloggiare">
+    <div class="page-loader" id="pageLoader" aria-hidden="false">
+      <div class="page-loader__content" role="status" aria-live="polite" aria-label="Caricamento">
+        <p class="page-loader__word" aria-label="ALCOVA">
+          <span>A</span><span>L</span><span>C</span><span>O</span><span>V</span><span>A</span>
+        </p>
+        <p class="page-loader__sub">LOUNGE BAR</p>
+      </div>
+    </div>
+
+    <button class="hamburger" id="hamburgerButton" type="button" aria-label="Apri menu" aria-controls="siteMenu" aria-expanded="false">
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+    </button>
+
+    <nav class="site-menu" id="siteMenu" aria-hidden="true">
+      <ul class="site-menu__list">
+        <li><a class="site-menu__link" href="index.html#home">Home</a></li>
+        <li><a class="site-menu__link" href="index.html#modes">Aperitivo</a></li>
+        <li><a class="site-menu__link" href="index.html#cucina">Cucina</a></li>
+        <li><a class="site-menu__link" href="index.html#specialita">Specialita</a></li>
+        <li><a class="site-menu__link" href="index.html#giornata">Colazione-Cena</a></li>
+        <li><a class="site-menu__link" href="index.html#partita">Partita</a></li>
+        <li><a class="site-menu__link" href="index.html#chi-siamo">Chi siamo</a></li>
+        <li><a class="site-menu__link" href="#alloggiare">Alloggiare</a></li>
+      </ul>
+    </nav>
+    <div class="site-menu__backdrop" id="menuBackdrop"></div>
+
+    <main>
+      <section class="stay" id="alloggiare" aria-label="Dove alloggiare a Polignano a Mare">
+        <img class="stay__bg-image" src="assets/stay.jpg" alt="" aria-hidden="true" />
+        <div class="stay__inner">
+          <h2 class="stay__title">
+            Vuoi fermarti a polignano
+            <br />
+            ma non sai dove <em>alloggiare?</em>
+          </h2>
+
+          <p class="stay__text">
+            Piccola Dimora Flora &egrave; una stanza di 27mq accogliente e curata nei dettagli, con stile moderno e delicate note floreali, a pochi passi dalla piazza principale, dal centro storico e dalla stazione:
+            <br />
+            perfetta per vivere Polignano a Mare a piedi e sentirsi subito a casa.
+          </p>
+
+          <button class="stay__cta" id="stayButton" type="button" data-stay-url="https://www.booking.com/hotel/it/flora-piccola-dimora.it.html?chal_t=1775681758336&amp;force_referer=https%3A%2F%2Fwww.google.com%2F">
+            DAI UN&rsquo;OCCHIATA
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

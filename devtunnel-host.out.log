@@ -1,0 +1,12 @@
+Hosting port: 8080
+Connect via browser: https://q6dvr27p.euw.devtunnels.ms:8080, https://q6dvr27p-8080.euw.devtunnels.ms
+Inspect network activity: https://q6dvr27p-8080-inspect.euw.devtunnels.ms
+
+Ready to accept connections for tunnel: jolly-fog-gx37bl8.euw
+ClientSSH: SshChannel(Type: forwarded-tcpip, Id: 1, RemoteId: 1) send window is full. Waiting for window adjustment before sending.
+ClientSSH: SshChannel(Type: forwarded-tcpip, Id: 1, RemoteId: 1) send window is full. Waiting for window adjustment before sending.
+ClientSSH: SshChannel(Type: forwarded-tcpip, Id: 1, RemoteId: 1) send window is full. Waiting for window adjustment before sending.
+ClientSSH: SshChannel(Type: forwarded-tcpip, Id: 1, RemoteId: 1) send window is full. Waiting for window adjustment before sending.
+ClientSSH: SshChannel(Type: forwarded-tcpip, Id: 1, RemoteId: 1) send window is full. Waiting for window adjustment before sending.
+ClientSSH: SshChannel(Type: forwarded-tcpip, Id: 1, RemoteId: 1) send window is full. Waiting for window adjustment before sending.
+ClientSSH: SshServerSession:7698173: Invalid channel ID 1 in ChannelWindowAdjustMessage(RecipientChannel: 1)(BytesToAdd: 524288)
