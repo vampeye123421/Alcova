@@ -30,6 +30,10 @@
     }
   };
 
+  if (pageLoader) {
+    showLoader();
+  }
+
   const finishLoader = () => {
     root.classList.add("is-ready");
     body.classList.remove("is-loading");
@@ -60,6 +64,15 @@
     const elapsed = performance.now() - loaderStart;
     const delay = Math.max(0, minLoaderDuration - elapsed);
     window.setTimeout(finishLoader, delay);
+  });
+
+  window.addEventListener("pageshow", () => {
+    if (!pageLoader) {
+      return;
+    }
+
+    showLoader();
+    window.setTimeout(finishLoader, minLoaderDuration);
   });
 
   const openExternal = (element, dataKey) => {
