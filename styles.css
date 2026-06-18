@@ -51,15 +51,31 @@ body.is-section-scrolling main {
 /* ===== Legal pages (Privacy, Cookie, Terms) ===== */
 .legal-page {
   min-height: 100dvh;
+  height: 100%;
   background: linear-gradient(140deg, #07131d 0%, #0b2232 56%, #0f2331 100%);
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.legal-page.is-loading {
+  overflow: visible !important;
 }
 
 .legal-page main {
-  flex: 1;
+  flex: 1 0 auto;
+  width: 100%;
   padding: 108px clamp(20px, 4vw, 48px) clamp(32px, 5vh, 64px);
-  overflow-y: auto;
+}
+
+.legal-page main > section {
+  height: auto !important;
+  min-height: auto !important;
+}
+
+.legal-page main > section:last-child {
+  scroll-snap-align: none;
 }
 
 .legal-content {
@@ -1303,6 +1319,10 @@ body.is-section-scrolling main {
 }
 
 @media (max-width: 900px) {
+  .legal-page {
+    overflow-y: auto !important;
+  }
+  
   .legal-page main {
     padding: 82px 16px 28px;
   }
