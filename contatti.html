@@ -3,13 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Team Building | Alcova Lounge Bar</title>
+    <title>Contatti | Alcova Lounge Bar</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400;1,800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <noscript><style>.page-loader{display:none!important;}</style></noscript>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16597026356"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -17,12 +16,11 @@
       gtag('js', new Date());
       gtag('config', 'AW-16597026356');
     </script>
-    <!-- Event snippet for Contatto conversion page -->
     <script>
       gtag('event', 'conversion', {'send_to': 'AW-16597026356/-iJ2CNrdgtAaELSMiuo9'});
     </script>
   </head>
-  <body class="is-loading team-building-page">
+  <body class="is-loading page-contatti">
     <div class="page-loader" id="pageLoader" aria-hidden="false">
       <div class="page-loader__content" role="status" aria-live="polite" aria-label="Caricamento">
         <p class="page-loader__word" aria-label="ALCOVA">
@@ -49,64 +47,52 @@
         <li><a class="site-menu__link" href="index.html#partita">Gioca mentre aspetti</a></li>
         <li><a class="site-menu__link" href="index.html#chi-siamo">Chi siamo</a></li>
         <li><a class="site-menu__link" href="contatti.html">Contatti</a></li>
-        <li><a class="site-menu__link" href="#team-building">Team Building</a></li>
+        <li><a class="site-menu__link" href="team-building.html">Team Building</a></li>
         <li><a class="site-menu__link" href="alloggiare.html">Dove alloggiare</a></li>
-        <li><a class="site-menu__link" href="informativa-sulla-privacy.html">Privacy</a></li>
       </ul>
     </nav>
     <div class="site-menu__backdrop" id="menuBackdrop"></div>
 
-    <main class="team-building">
-      <img
-        src="assets/LOGO ALCOVA - FRANCESCO STOPPA.pdf.png"
-        alt="Logo Alcova"
-        class="team-building__logo"
-        onerror="this.onerror=null;this.src='assets/logo.png';"
-      />
+    <main class="reservation-page">
+      <section class="reservation-page__hero" aria-label="Prenotazioni Alcova Lounge Bar">
+        <div class="reservation-page__inner">
+          <div class="reservation-page__topbar">
+            <img src="assets/logo.png" alt="Logo Alcova" class="reservation-page__logo" onerror="this.onerror=null;this.src='assets/logo-main.svg';" />
+          </div>
 
-      <section class="team-building__sheet" id="team-building" aria-label="Team building Alcova Lounge Bar">
-        <div class="team-building__content">
-          <h1 class="team-building__title">TEAM BUILDING</h1>
+          <div class="reservation-page__content">
+            <div class="reservation-page__intro">
+              <p class="reservation-page__eyebrow">Contatti e prenotazioni</p>
+              <h1 class="reservation-page__title">Prenota un tavolo</h1>
+              <p class="reservation-page__lead">
+                Usa il widget TheFork qui sotto per riservare il tuo posto in pochi secondi.
+                Se preferisci aprire la prenotazione in una scheda separata, trovi anche il pulsante diretto.
+              </p>
 
-          <ul class="team-building__list">
-            <li>Sei alla ricerca di una location speciale per organizzare un evento che lasci il segno nei tuoi ospiti?</li>
-            <li>Vuoi rafforzare la coesione del tuo team con esperienze diverse dal solito?</li>
-            <li>Stai pianificando una festa e desideri un servizio bar curato nei minimi dettagli ma anche creativo?</li>
-          </ul>
+              <a
+                class="reservation-page__cta"
+                href="https://widget.thefork.com/3d56e860-7cac-4616-abbc-07979d3cc99d"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Apri prenotazione
+              </a>
+            </div>
 
-          <p class="team-building__paragraph">
-            Con noi puoi dare forma esattamente a ci&ograve; che immagini:
-            <br />
-            ti basta contattarci per definire insieme ogni dettaglio.
-            <br />
-            Il <strong><em>team building</em></strong> &egrave; un'attivit&agrave; svolta al di fuori del contesto aziendale,
-            <br />
-            il cui obiettivo &egrave; elevare il senso di appartenenza dei dipendenti attraverso il gioco di squadra.
-          </p>
-
-          <p class="team-building__paragraph">
-            L'aperitivo per gli italiani &egrave; momento d'incontro,
-            <br />
-            utile per staccare la spina dalla solita routine e l'occasione giusta per approfondire i rapporti.
-          </p>
-
-          <p class="team-building__highlight">
-            Serate a tema , sfide sui cocktail e attivit&agrave; divertenti che coinvolgano il team.
-          </p>
-
-          <p class="team-building__note">*PRENOTAZIONE OBBLIGATORIA</p>
+            <div class="reservation-page__embed">
+              <iframe
+                class="reservation-page__iframe"
+                src="https://widget.thefork.com/3d56e860-7cac-4616-abbc-07979d3cc99d"
+                title="Prenotazione TheFork"
+                allow="payment *"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
         </div>
-
-        <a
-          class="team-building__cta"
-          href="https://wa.me/393891248906?text=Ciao%2C%20posso%20avere%20informazioni%20per%20il%20team%20building%3F"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          RICHIEDI INFORMAZIONI
-        </a>
       </section>
     </main>
+
     <script src="script.js"></script>
   </body>
 </html>
